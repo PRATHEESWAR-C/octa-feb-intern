@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Octanet</title>
+  <style>
+    /* Your existing styles remain unchanged */
+
+    /* New styles for navigation */
+    nav {
+      background-color: #3498db;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #ecf0f1;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+    }
+
+    /* New styles for home, about, contact, and login sections */
+    .home-section,
+    .about-section,
+    .contact-section,
+    .login-section {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #e65b90;
+      margin-top: 20px;
+    }
+    h1,p{
+      text-align: center;
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>OCTANET</h1>
+    <p>Ultimate Networking Solution</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#login">Login</a>
+  </nav>
+
+  <section class="home-section" id="home">
+    <h2>Welcome to Octanet</h2>
+    <p>Experience the future of networking with Octanet.</p>
+  </section>
+
+  <section class="about-section" id="about">
+    <h2>About Octanet</h2>
+    <p>Discover the innovative solutions that power Octanet.</p>
+    <br>
+       <p>
+        Octanet revolutionizes connectivity with its unrivaled benefits, ensuring users experience a seamless and reliable online world. Offering unparalleled speed, Octanet guarantees swift access to digital content and applications, meeting the demands of today's fast-paced digital landscape. Security is paramount, as Octanet employs cutting-edge encryption, safeguarding user data and privacy. The service is designed for scalability, accommodating the needs of individuals, small businesses, and large enterprises alike. With global coverage, Octanet keeps users connected across the globe, transcending geographical boundaries. Transparent and cost-effective plans cater to diverse user requirements without compromising quality. Octanet's user-friendly interface empowers users to effortlessly manage their connectivity settings, supported by 24/7 customer support for immediate assistance. Integrating innovative technologies and maintaining an eco-friendly approach, Octanet is not just a network but a transformative force enhancing the way we connect and engage in the digital age.
+       </p>
+
+  </section>
+
+  <section class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Reach out to us for any inquiries or support.</p>
+    <p>Email: info@octanet.com</p>
+    <p>Phone: +1 (123) 456-7890</p>
+  </section>
+
+  <section class="login-section" id="login">
+    <h2>Login to Octanet</h2>
+    <!-- Add your login form here -->
+    <form>
+      <!-- Your login form fields go here -->
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <section>
+    <!-- Your existing Features section remains unchanged -->
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Octanet internship. All rights reserved.</p>
+  </footer>
+</body>
+</html>
