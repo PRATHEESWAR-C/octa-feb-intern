@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful To-Do List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fc3550;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #todo-container {
+            width: 300px;
+            background-color: #b4f5f2;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(122, 45, 245, 0.918);
+            text-align: center;
+        }
+
+        #todo-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .todo-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #5de7b2;
+            padding: 8px 0;
+            color: #df64ba;
+        }
+
+        .todo-item input {
+            margin-right: 10px;
+        }
+
+        .add-todo {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .add-todo input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            outline: none;
+        }
+
+        .add-todo button {
+            background-color: #df43c5;
+            color: #81e681;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="todo-container">
+        <h2 style="color: #4caf50;">Colorful To-Do List</h2>
+        <ul id="todo-list"></ul>
+        <div class="add-todo">
+            <input type="text" id="newTodo" placeholder="Add a new task" style="color: #333;">
+            <button onclick="addTodo()">Add Task</button>
+        </div>
+    </div>
+
+    <script>
+        function addTodo() {
+            const todoInput = document.getElementById("newTodo");
+            const todoList = document.getElementById("todo-list");
+
+            if (todoInput.value.trim() !== "") {
+                const todoItem = document.createElement("li");
+                const randomColor = getRandomColor();
+                todoItem.className = "todo-item";
+                todoItem.style.color = randomColor;
+                todoItem.innerHTML = `
+                    <input type="checkbox">
+                    <span style="color: ${randomColor};">${todoInput.value}</span>
+                    <button onclick="removeTodo(this)">Remove</button>
+                `;
+                todoList.appendChild(todoItem);
+                todoInput.value = "";
+            }
+        }
+
+        function removeTodo(button) {
+            const todoList = document.getElementById("todo-list");
+            todoList.removeChild(button.parentNode);
+        }
+
+        function getRandomColor() {
+            const letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>
